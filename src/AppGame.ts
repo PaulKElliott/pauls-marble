@@ -91,11 +91,11 @@ export default class AppGame {
     // add Events Global
     window.addEventListener( 'resize', this.onWindowResize.bind(this), false);
 
-    // new RGBELoader()
-    //   .setDataType( UnsignedByteType )
-    new TextureLoader()
+    new RGBELoader()
+      .setDataType( UnsignedByteType )
+    // new TextureLoader()
       .setPath( 'assets/' )
-      .load( 'Milkyway_BG.jpg', ( hdrEquirect ) => {
+      .load( 'Milkyway_small.hdr', ( hdrEquirect ) => {
 
         var hdrCubeRenderTarget = this.pmremGenerator.fromEquirectangular( hdrEquirect );
         hdrEquirect.dispose();
