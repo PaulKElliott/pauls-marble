@@ -6,9 +6,8 @@
     "start": "npm run clean && parcel src/index.html",
     "build": "npm run clean && parcel build src/index.html --public-url ./",
     "clean": "rimraf ./dist ./.cache",
-    "predeploy": "rollup -c rollup.examples.config.js && shx mkdir -p .ghpages && shx cp -r examples/index.html examples/assets examples/build.js .ghpages",
-    "trydeploy": "npm run predeploy && sirv start .ghpages",
-    "deploy": "npm run predeploy && gh-pages -d .ghpages && shx rm -rf .ghpages"
+    "tryd": "npm run build && sirv start dist",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [
     "Parcel",

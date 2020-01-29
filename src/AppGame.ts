@@ -201,7 +201,7 @@ export default class AppGame {
     this.camera.updateProjectionMatrix();
 
     this.renderer.setSize(this.wWidth, this.wHeight);
-    this.composer.setSize(this.wWidth, this.wHeight);
+    // this.composer.setSize(this.wWidth, this.wHeight);
   }
 
   animate() {
